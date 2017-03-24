@@ -1,0 +1,65 @@
+Verificar status do ranking:
+
+- Quando o usuário termina o jogo, será solicitado a pontuação minima do ranking via json para o servidor. (Somente se o jogador quiser, caso não desejar não será enviado nenhuma solicitação.)
+- Será retornado para a aplicação desktop um json contendo a pontuação mínima para entrar no ranking.
+- será verificado se a pontuação do usuário é superior a pontuação mínima. Caso for superior, envia pontuação juntamente
+
+Update do ranking(Caso pontuação for superior a últimas posição):
+
+1 Receber via json o valor da pontuação realizada pelo usuário.
+2 verificar em qual posição esta pontuação se enquadra.
+3 realizar update reordenando as posições mantendo o top 10.
+
+
+
+critério para desempate.
+tempo de jogo e quantidade de movimento e quantidade de movimento.
+
+
+Ps: usar o angular para imprimir os registros da tableba.
+
+
+=========================
+
+Algorítimo de rankeamento:
+
+O for itera pelo vetor realizando comparações, se for maior passa para o próximo, se não for maior, verifica se é igual, se for igual, verifica os critérios de desempate. Caso a pontuação candidata vencer, ela entra na posição que o outro estava e depois reordena o ranking. 
+
+Se não for maior nem igual, quer dizer que ele é maior que aposição anterior (i-1). Sendo assim ele irá assumir a posição do registro anterior no ranking. 
+
+=========================
+
+
+Enviar as informações do desktop para a api web
+
+Se possível tentar enviar via POST	
+
+Ex:
+WebRequest request = WebRequest.Create("http://dama.expressahost.com.br/?controller=Ranking&action=insertRanking&name=Gamer&score=32599&time=05:02:00&mov=12");
+
+Ordenar select por mais de um atributo: testar para saber se vai dar certo. 
+
+$sql = "SELECT * FROM tabela ORDER BY data,nome DESC" ;
+
+
+==============================
+
+criar n biblioteca o autoload e o filtro anti sql injection
+
+==============================
+
+http://dama.expressahost.com.br/?controller=Ranking&action=insertRanking&name=Gamer&score=32599&time=05:02:00&mov=12
+
+
+comand = new SqlCommand(comando,(SqlConnection)Conexao); 
+
+
+
+?controller=Ranking&action=topRanking&limit="+limit+"&pont="+pont+"&mov="+mov+"&data="+data
+
+==============================
+
+Fazer os casos de uso e passar para o Iago
+
+Ionic e phonegap
+

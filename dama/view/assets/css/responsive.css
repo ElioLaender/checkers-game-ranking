@@ -1,0 +1,99 @@
+/* lg */ 
+@media (min-width: 1400px) {
+	
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	#support-us ul li {
+		margin: 0;
+	}
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-nav li a{
+		padding: 10px 10px;
+		font-size: 13px;
+		line-height:40px;
+	}
+	#support-us ul li {
+		margin: 10px 25px;
+	}
+}
+
+
+/* xs */
+@media (max-width: 767px) {
+	h1 {
+		font-size:28px;
+	}
+	h2{
+		font-size:20px;
+	}
+	h3{
+		font-size:16px;
+	}
+	.padding {
+		padding: 50px 0px;
+	}
+	.section-title {
+		margin-bottom:30px;
+		font-size:14px;
+	}
+	.section-title h1{
+		font-size:30px;
+	}
+	.navbar-nav li a {
+		line-height:22px;
+	}
+	.main-slider .slider-content {
+		font-size: 18px;
+	}
+	.main-slider .present {
+		font-size: 24px;
+	}
+	.main-slider .slider-content h1 {
+		font-size: 45px;
+		line-height: 45px;
+	}
+	#countdown {
+		margin-left: -148px;
+	}
+	#countdown li {
+		padding: 5px;
+		width: 65px;
+	}
+	#countdown li span {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.performer-image img {
+		width:100%;
+	}
+	.performer {
+		margin-bottom:15px;
+	}
+	#support-us {
+		padding:50px 0;
+	}
+	#support-us ul li {
+		margin: 8px 25px;
+	}
+	#contact-us .contact-form {
+		padding-top: 50px;
+		padding-bottom: 45px;
+	}
+	#gmap{
+		height:350px;
+	}
+	#footer-bottom {
+		padding: 30px 0px 20px;
+	}
+}
+
+/* XS Portrait */
+@media (max-width: 479px) {
+	
+}
+

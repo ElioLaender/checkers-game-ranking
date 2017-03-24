@@ -1,0 +1,59 @@
+
+.bottom-space{
+    margin-bottom: 20px;
+}
+
+.saiba-mais-fonts{
+    font-size: 20px;
+    text-align: justify;
+}
+
+th,td {
+
+    text-align: center;
+}
+
+table {
+
+    margin-top: 100px;
+
+}
+
+.center{
+
+    text-align: center;
+}
+
+.button,.button-download{
+    background-color: #449d44;
+    width: 250px;
+    height: 50px;
+}
+
+.button-download{
+    margin-top: 70px;
+}
+
+
+.borda:focus{
+    border-color: #02aae8;
+}
+
+#filter{
+    margin-top: 50px;
+}
+
+.preload {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: #fff;
+    background-image: url("view/assets/images/others/loading.gif");
+    background-size: 1000px 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
