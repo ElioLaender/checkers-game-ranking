@@ -7,7 +7,6 @@
  */
 
 /*Esta classe serve de base para todos os controles do MVC em PHP. Ela serve para compartilhar código entre todos os controles. */
-
 include_once 'config/ViewConfig.php';
 include_once 'config/RouteConfig.php';
 
@@ -17,24 +16,15 @@ class ControllerConfig {
      * Variável usada como mecanismo de renderização de visões.
      * O objeto visão do arquivo Visao.php
      */
-
     protected $view = null;
-
     public $nome;
-
     private $route;
-
-
-
 
     /*
      * Construtor da classe, inicializando o mecanismo e de visão dos controles.
      */
-
     public function __construct(){
         $this->view = new ViewConfig();
-
-
     }
 
     /**
@@ -60,8 +50,6 @@ class ControllerConfig {
          */
         return $this->nome = new $nome();
     }
-
-
 
     /*
      * Método index padrão usado em todos os controles.
