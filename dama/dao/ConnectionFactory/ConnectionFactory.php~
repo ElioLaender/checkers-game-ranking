@@ -11,7 +11,7 @@
 class ConnectionFactory {
 
    private $user = 'root',
-            $pass = '193945',
+            $pass = 'xxxxxxxx',
             $host = 'localhost',
             $dataBase = 'GAMEDAMA';
 
