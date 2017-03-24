@@ -262,26 +262,6 @@ class AutenticadorEmBanco extends AutenticadorConfig {
 
     }
 
-    /*
-     * <?php
-    $meu_array["feira"] = array("fruta" => "5"); // meu array
-    $meu_array = serialize($meu_array); //serializando o array, eu posso transmiti-lo num cookie
-    setcookie("meu_cookie",$meu_array,time()*60*60*24*30); //criando um cookie com o meu array
-
-    //recebendo o cookie, se ele tiver sido criado
-    $meu_array = isset($_COOKIE["meu_cookie"]) ? $_COOKIE["meu_cookie"] : "";
-    print_r(unserialize($meu_array)); //decodificando o cookie e mostrando o array
-
-    //o resultado seria
-    Array
-    (
-        [feira] => Array
-             (
-                 [fruta] => 5
-             )
-     )
-?>
-     */
 
     //verificar se realmente será necessário esta função para retornar o cookie, e não o valor diretamente.
     #retorna o array do cookie criado na sessão
