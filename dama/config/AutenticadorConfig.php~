@@ -105,7 +105,7 @@ class AutenticadorEmBanco extends AutenticadorConfig {
 
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-        $pdo = new PDO('mysql:dbname=GAMEDAMA;host=localhost','root', '193945');
+        $pdo = new PDO('mysql:dbname=GAMEDAMA;host=localhost','root', 'xxxxxx');
 
         $sess = SessaoConfig::instanciar();
 
