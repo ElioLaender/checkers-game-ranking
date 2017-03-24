@@ -15,7 +15,7 @@ class HomeController extends ControllerConfig {
 
         $objDowns = new DownloadsDAO();
 
-		$this->route = RouteConfig::rotas();
+	$this->route = RouteConfig::rotas();
         $this->view->set('URL_INI', $this->route['URL_INI']);
         $this->view->set('qtDowns',$objDowns->qtDowns());
         $this->view->render($this->route['HOME_PAGE_DIR']);
@@ -28,7 +28,7 @@ class HomeController extends ControllerConfig {
 
         $objContact = new ContatoDAO();
         $objContact->persistContact($_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
-	    header("location: http://dama.semprenegocio.com.br/");
+	header("location: http://dama.semprenegocio.com.br/");
 
     }
 
@@ -37,7 +37,6 @@ class HomeController extends ControllerConfig {
 
         $objDown = new DownloadFunctions();
         $objContDown = new DownloadsDAO();
-
         $objContDown->downIncrement();
         $objDown->directDownload();
 
