@@ -5,6 +5,7 @@ include_once 'config/RouteConfig.php';
 include_once 'libraries/DownloadFunctions.php';
 include_once 'dao/AccessObject/ContatoDAO.php';
 include_once 'dao/AccessObject/DownloadsDAO.php';
+include_once 'libraries/Sanitize.php';
 
 class HomeController extends ControllerConfig {
 
@@ -27,7 +28,7 @@ class HomeController extends ControllerConfig {
     public function persistMenssager(){
 
         $objContact = new ContatoDAO();
-        $objContact->persistContact($_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
+        $objContact->persistContact(Sanitize::filter($_POST['name']),Sanitize::filter($_POST['email']),Sanitize::filter($_POST['subject']),Sanitize::filter($_POST['message']));
 	header("location: http://dama.semprenegocio.com.br/");
 
     }
