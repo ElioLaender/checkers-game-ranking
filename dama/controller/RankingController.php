@@ -5,23 +5,24 @@ include_once 'config/RouteConfig.php';
 include_once 'dao/AccessObject/RankingDAO.php';
 include_once 'libraries/Sanitize.php';
 
-class RankingController extends ControllerConfig{
-
+class RankingController extends ControllerConfig
+{
         #retorna o top dez dos jogadores
-        public function topRanking(){
-
+        public function topRanking()
+        {
             $objRanking = new RankingDAO();
-           $objRanking->selectRanking();
-
+            $objRanking->selectRanking();
         }
 
         #insere valores ao ranking
-        public function insertRanking(){
-
+        public function insertRanking()
+        {
             $objRanking = new RankingDAO();
-            $objRanking->insertReg(Sanitize::filter($_GET['name']),Sanitize::filter($_GET['score']),Sanitize::filter($_GET['time']),Sanitize::filter($_GET['mov']));
-
+            $objRanking->insertReg
+                    (
+                        Sanitize::filter($_GET['name']),
+                        Sanitize::filter($_GET['score']),
+                        Sanitize::filter($_GET['time']),
+                        Sanitize::filter($_GET['mov']));
         }
-
-
 }
