@@ -6,17 +6,13 @@
  * Date: 10/09/15
  * Time: 11:32
  */
-
-
-
-class RouteConfig {
-
-
+class RouteConfig 
+{
     /**
      * @return array
      */
-    public static function rotas(){
-
+    public static function rotas()
+    {
         return array(
 
             'HOME_PAGE_DIR'             =>  'home/home.php',
@@ -25,11 +21,7 @@ class RouteConfig {
             'CONFIG_DIR'                =>  'config/',
             'VIEW_DIR'                  =>  'view/pages/',
             'MODEL_DIR'                 =>  'model/',
-
-
-
         );
     }
-
 }
 
