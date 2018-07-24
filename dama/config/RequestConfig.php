@@ -1,9 +1,7 @@
 <?php
 
-
-class RequestConfig {
-
-
+class RequestConfig 
+{
     /*Obtém requisições via $_REQUEST */
     public static function getRequest($key)
     {
@@ -20,9 +18,6 @@ class RequestConfig {
     public static function setRequest($key, $val){
         $_REQUEST[$key] = $val;
     }
-
-
-    /*
 
     /*Obtém as requisições via $_POST*/
     public static function getPost($key)
@@ -41,8 +36,4 @@ class RequestConfig {
     public static function setPost($key, $val){
         $_POST[$key] = $val;
     }
-
-
-
-
 }
