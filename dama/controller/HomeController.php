@@ -18,8 +18,7 @@ class HomeController extends ControllerConfig
 		$this->view->set('qtDowns',$objDowns->qtDowns());
 		$this->view->render($this->route['HOME_PAGE_DIR']);
 	}
-
-
+	
     #solicita persistência da mensagem no banco de dados
     public function persistMenssager()
     {
