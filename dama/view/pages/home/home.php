@@ -1,74 +1,62 @@
-
-
-	<!--/#scripts--> 
- 
+<!--/#scripts--> 
 </html>
-
-
 <!DOCTYPE html >
 <html lang="pt-br" ng-app="helloWorld">
 <head>
+	<script src="view/assets/js/angular.js"></script>
+		<script>
+			var app = angular.module("helloWorld", []);
+			app.controller("helloWorld").controller("helloWorldCtrl", function ($scope){ 
+				$scope.message = returnJson("?controller=Ranking&action=topRanking");
+		    $scope.numLimit = 10;
 
-<script src="view/assets/js/angular.js"></script>
-
-	<script>
-		var app = angular.module("helloWorld", []);
-		app.controller("helloWorld").controller("helloWorldCtrl", function ($scope){ 
-			$scope.message = returnJson("?controller=Ranking&action=topRanking");
-            $scope.numLimit = 10;
-
-        for(var i = 0; i < $scope.message.length; i++){
-
-            $scope.message[i].Ranking_score = parseInt($scope.message[i].Ranking_score);
-            $scope.message[i].Ranking_mov = parseInt($scope.message[i].Ranking_mov);
-        }
-
-
-            //$scope.propertyName = 'Ranking_score';
-            $scope.reverse = false;
-
-            $scope.sortBy = function(propertyName) {
-                $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
-                $scope.propertyName = propertyName;
-            };
-	});
-
+		for(var i = 0; i < $scope.message.length; i++)
+		{
+		    $scope.message[i].Ranking_score = parseInt($scope.message[i].Ranking_score);
+		    $scope.message[i].Ranking_mov = parseInt($scope.message[i].Ranking_mov);
+		}
+		    //$scope.propertyName = 'Ranking_score';
+		    $scope.reverse = false;
+		    $scope.sortBy = function(propertyName) 
+		    {
+			$scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+			$scope.propertyName = propertyName;
+		    };
+		});
 
 	</script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esta página é a interface web de um software de jogo de damas
-desenvolvido como trabalho para a disciplina de Engenharia da Software II do curso de
-Engenharia da Computação da UEMG – Campus Divinópolis.">
-    <meta name="author" content="Aaron Alves,Allan Eduardo,Diego Santos,Élio Quadros,Frederico Neves,Iago André,Igor Santos,Lucas Ribeiro,Thales Menezes,Wilbert Silva">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Esta página é a interface web de um software de jogo de damas
+	desenvolvido como trabalho para a disciplina de Engenharia da Software II do curso de
+	Engenharia da Computação da UEMG – Campus Divinópolis.">
+	<meta name="author" content="Aaron Alves,Allan Eduardo,Diego Santos,Élio Quadros,Frederico Neves,Iago André,Igor Santos,Lucas Ribeiro,Thales Menezes,Wilbert Silva">
 	<!--title-->
-    <title>Jogo de Damas | Engenharia de software II</title>
-	
+	<title>Jogo de Damas | Engenharia de software II</title>
+
 	<!--CSS-->
-    <link href="view/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="view/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="view/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="view/assets/css/font-awesome.min.css" rel="stylesheet">
 	<link href="view/assets/css/magnific-popup.css" rel="stylesheet">	
 	<link href="view/assets/css/vegas.min.css" rel="stylesheet">
 	<link href="view/assets/css/main.css" rel="stylesheet">
 	<link href="view/assets/css/responsive.css" rel="stylesheet">
-    <link href="view/assets/css/home.css" rel="stylesheet">
+	<link href="view/assets/css/home.css" rel="stylesheet">
 
 	<!--Google Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800,100,600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css'>
-	
-    <!--[if lt IE 9]>
+
+	<!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
-
+	<![endif]-->       
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body>
 <div id="preload" class="preload"></div>
@@ -109,13 +97,10 @@ Engenharia da Computação da UEMG – Campus Divinópolis.">
 					<div class="present">
 						<p>Engenharia de SoftwareII</p>
 					</div>
-					<h1>Jogo de Damas</h1>
-					
+					<h1>Jogo de Damas</h1>	
 				</div>
 			</div>
 		</div><!--/#slider section-->
-			
-		
 	</div><!--/#main-slider-wrapper-->
 	<!-- Saiba mais -->
 	<div id="support-us">
@@ -379,9 +364,7 @@ Banco de Dados</p>
 <td> {{ item.Ranking_game_time}} </td>
 <td> {{ item.Ranking_data_reg}} </td>
 </tr>
-
-
-
+	
 </table>
 </div>
 
@@ -519,11 +502,8 @@ Banco de Dados</p>
             }
 
         });
-
-
-
+	    
         $("#refresh").click(function() {
-
             location.reload();
         });
 
@@ -544,22 +524,3 @@ Banco de Dados</p>
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-    
-    
-
-
-
