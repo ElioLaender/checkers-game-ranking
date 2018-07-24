@@ -5,42 +5,40 @@
  * Date: 08/09/15
  * Time: 18:56
  */
-
-
-
-class ConnectionFactory {
-
+class ConnectionFactory 
+{
    private $user = 'eliolaen_adm',
-            $pass = 'el193945',
+            $pass = '',
             $host = 'localhost',
             $dataBase = 'eliolaen_dama';
 
     //Método responsável pela conexão com o banco de dados.
-    protected function conecta(){
-        try{
+    protected function conecta()
+    {
+        try
+        {
             $conectDB = new PDO("mysql:host=".$this->host.";dbname=".$this->dataBase, $this->user, $this->pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8' "));
             return $conectDB;
-        } catch (Exception $ex){
+        } catch (Exception $ex)
+        {
             exit($ex);
         }
     }
 
     //executa uma consulta
-    public function runQuery($sql){
-
+    public function runQuery($sql)
+    {
         $stm = $this->conecta()->prepare($sql); #Prepare faz parte da classe PDO(nativa do php)
         return $stm->execute(); #também faz parte da class PDO.
     }
 
     //Executa consulta de select na base de dados.
-    public function runSelect($sql){
+    public function runSelect($sql)
+    {
         $stm = $this->conecta()->prepare($sql);
         $stm->execute();
         #retorna array multidimensional contendo os dados retornados.
         return $stm->fetchAll(PDO::FETCH_ASSOC);
     }
-
-
-
 }
 
